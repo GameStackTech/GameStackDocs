@@ -2,9 +2,11 @@
 GameStack has 2 kinds of users.
 
 **Creators**
+
 Creators are the people that make the games.
 
 **Players**
+
 Players are the people that use the creators games.
 
 GameStack user APIs allow creation and management of accounts for both creators and players as well as authentication. The following sections are quick start guides that will show you how to make creator and player accounts via the GameStack REST API and how to login and authenticate with you account(s).
