@@ -15,23 +15,23 @@ To start using GameStack for you games you need to make a creator account so you
 
 You will need to provide the following information in your call to the **/signup** API.
 
-* email
+* `email`
   * Required: **Yes**
   * Data type: **string**
   * Description: The email that will be used to access the account.
-* first_name
+* `first_name`
   * Required: **Yes**
   * Data type: **string**
   * Description: The given name of the owner contact for the account.
-* last_name
+* `last_name`
   * Required: **Yes**
   * Data type: **string**
   * Description: The family name of the owner contact for the account.
-* organization
+* `organization`
   * Required: **Yes**
   * Data type: **string**
   * Description: The name of the organization that owns this account.
-* password
+* `password`
   * Required: **Yes**
   * Data type: **string**
   * Description: The password for the account.
@@ -49,11 +49,11 @@ Once you have made your creator account you can now authenticate (I.E. login) to
 
 You will need to provide the following information in your call to the **/login** API.
 
-* email
+* `email`
   * Required: **Yes**
   * Data type: **string**
   * Description: The email of the creator account that you want to login with.
-* password
+* `password`
   * Required: **Yes**
   * Data type: **string**
   * Description: The password to access the creator account.
