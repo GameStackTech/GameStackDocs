@@ -37,13 +37,11 @@ You will need to provide the following information in your call to the **/signup
   * Required: **Yes**
   * Data type: **string**
   * Description: The password for the account.
-    * **Requirements**: The password needs to be encoded before it is used in the **/signup** API call. First the password needs to be converted into a **SHA512** hash. The **SHA512** hash then needs to be Hex encoded. Note that the resulting string needs to use **lower case** letters.
-      * Example: The password **test** encodes to **ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff**
 
 **Creator signup REST API example**
 
 ```sh
-curl -v -H 'Content-Type: application/json' -d '{"email":"some@email.com","first_name":"ContactsFirstName","last_name":"ContactsLastName","organization":"ContactsOrganizationName","password":"ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff"}' http://localhost:8070/signup
+curl -v -H 'Content-Type: application/json' -d '{"email":"some@email.com","first_name":"ContactsFirstName","last_name":"ContactsLastName","organization":"ContactsOrganizationName","password":"test"}' http://localhost:8070/signup
 ```
 
 ### Authenticate
@@ -59,13 +57,11 @@ You will need to provide the following information in your call to the **/login*
   * Required: **Yes**
   * Data type: **string**
   * Description: The password to access the creator account.
-    * **Requirements**: The password needs to be encoded before it is used in the **/login** API call. First the password needs to be converted into a **SHA512** hash. The **SHA512** hash then needs to be Hex encoded. Note that the resulting string needs to use **lower case** letters.
-      * Example: The password **test** encodes to **ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff**
 
 **Creator login REST API example**
 
 ```sh
-curl -v -H 'Content-Type: application/json' -d '{"email":"some@email.com","password":"ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff"}' http://localhost:8070/login
+curl -v -H 'Content-Type: application/json' -d '{"email":"some@email.com","password":"test"}' http://localhost:8070/login
 ```
 
 ## Player quick start
