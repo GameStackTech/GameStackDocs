@@ -32,7 +32,7 @@ Leaderboards contain player statistics. To make a leaderboard you need an applic
 You will need to provide the following information in your call to the **/app/{applciation_id}/leaderboard** API.
 
 * URL
-  * `/app/{applciation_id}/leaderboard*`
+  * `/app/{applciation_id}/leaderboard`
     * `application_id`
       * Required: **Yes**
       * Data type: **string**
