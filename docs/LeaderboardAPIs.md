@@ -8,6 +8,11 @@ Applications represent your games or titles. An application is required to creat
 
 You will need to provide the following information in your call to the **/app** API.
 
+* Headers
+  * `Authorization`
+    * Required: **Yes**
+    * Value: `Bearer <your_access_token>`
+    * Description: A valid access token for a GameStack creator.
 * Body
   * `name`
     * Required: **Yes**
@@ -31,6 +36,11 @@ Leaderboards contain player statistics. To make a leaderboard you need an applic
 
 You will need to provide the following information in your call to the **/app/{applciation_id}/leaderboard** API.
 
+* Headers
+  * `Authorization`
+    * Required: **Yes**
+    * Value: `Bearer <your_access_token>`
+    * Description: A valid access token for a GameStack creator.
 * URL
   * `/app/{applciation_id}/leaderboard`
     * `application_id`
