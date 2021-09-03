@@ -1,5 +1,5 @@
 # Leaderboard API
-The leaderboard APIs allow creators to make applications. Think of an application as single game or title. Once you have an application you can then create leaderboards for your applications. The leaderboard API also allows players to create and get stats.
+The leaderboard APIs allow creators to make applications. Think of an application as game or title. Once you have an application you can then create leaderboards for your applications. The leaderboard API also allows players to create and get stats.
 
 **NOTE** Remember that you will need a creator account and be logged in to get an access token to access the `CreateApplication` and `CreateLeaderboard` APIs. See the [UserAPI creator quick start](https://github.com/GameStackTech/GameStackDocs/blob/main/docs/UserAPIs.md#creator-quick-start) guide for info on how to signup for a creator account and how to login to get an access token.
 
@@ -16,7 +16,7 @@ You will need to provide the following information in your call to the **/app** 
 
 **Sample request**
 ```sh
-curl -v -H 'Content-Type: application/json' -H 'Authorization: Bearer <your_access_token>' -d '{"name":"DemoGame"}' http://localhost:8080/app
+curl -H 'Content-Type: application/json' -H 'Authorization: Bearer <your_access_token>' -d '{"name":"DemoGame"}' http://localhost:8080/app
 ```
 
 If successful you will get a response with you new applications ID. You will want to make a note of this as you will need if for calls to create leaderboards.
@@ -52,7 +52,7 @@ You will need to provide the following information in your call to the **/app/{a
 curl -H 'Content-Type: application/json' -H 'Authorization: Bearer <your_access_token>' -d '{"name":"DemoLeaderboard","dimensions":{"wins":{"data":{"type":"INT"}},"losses":{"data":{"type":"INT"}}}}' http://localhost:8080/app/<your_applciation_id>/leaderboard
 ```
 
-If successful you will get a response with you new leaderboards ID. You will want to make a note of this as you will need if for calls to put and get stats.
+If successful you will get a response with your new leaderboards ID. You will want to make a note of this as you will need if for calls to put and get stats.
 
 **Sample response**
 ```json

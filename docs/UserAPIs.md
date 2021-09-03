@@ -13,7 +13,7 @@ GameStack user APIs allow creation and management of accounts for both creators 
 
 ## Creator quick start
 ### Signup
-To start using GameStack for you games you need to make a creator account so you can make applications and leaderboards for those appications.
+To start using GameStack in your games you need to make a creator account so you can make applications and leaderboards for those applications.
 
 You will need to provide the following information in your call to the **/signup** API.
 
@@ -42,7 +42,7 @@ You will need to provide the following information in your call to the **/signup
 **Creator signup REST API example**
 
 ```sh
-curl -v -H 'Content-Type: application/json' -d '{"email":"some@email.com","first_name":"ContactsFirstName","last_name":"ContactsLastName","organization":"ContactsOrganizationName","password":"test"}' http://localhost:8070/signup
+curl -H 'Content-Type: application/json' -d '{"email":"some@email.com","first_name":"ContactsFirstName","last_name":"ContactsLastName","organization":"ContactsOrganizationName","password":"test"}' http://localhost:8070/signup
 ```
 
 ### Authenticate
@@ -63,7 +63,50 @@ You will need to provide the following information in your call to the **/login*
 **Creator login REST API example**
 
 ```sh
-curl -v -H 'Content-Type: application/json' -d '{"email":"some@email.com","password":"test"}' http://localhost:8070/login
+curl -H 'Content-Type: application/json' -d '{"email":"some@email.com","password":"test"}' http://localhost:8070/login
 ```
 
 ## Player quick start
+### Signup
+GameStack players put and get stats from leaderboards. To create a GameStack player account you will need to supply the following information.
+
+* Body
+  * `username`
+    * Required: **Yes**
+    * Data type: **string**
+    * Description: The players name. Must be unique among GameStack users.
+  * `email`
+    * Required: **Yes**
+    * Data type: **string**
+    * Description: The players email address.
+  * `name`
+    * Required: **No**
+    * Data type: **string**
+    * Description: The players real life name.
+  * `password`
+    * Required: **Yes**
+    * Data type: **string**
+    * Description: The password to access the players account.
+
+**Player signup REST API example**
+```sh
+curl -H 'Content-Type: application/json' -d '{"username":"some_username","email":"some@email.com","name":"Some User","password":"test"}' http://localhost:8070/players/signup
+```
+
+### Authenticate
+Once you have made a player account you can now authenticate (I.E. login) to GameStack to get an access token which will allow you to make calls to protected GameStack APIs so you can put to and get stats from leaderboards.
+
+* Body
+  * `username`
+    * Required: **Yes**
+    * Data type: **string**
+    * Description: The players username.
+  * `password`
+    * Required: **Yes**
+    * Data type: **string**
+    * Description: The password to access the players account.
+
+**Player login REST API example**
+```sh
+curl -H 'Content-Type: application/json' -d '{"username":"some_username","password":"test"}' http://localhost:8070/players/login
+```
